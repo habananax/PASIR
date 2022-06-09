@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  background: #8E96C8;
+}
+
+table {
+    width:100%;
+  }
+
+table, th, td {
+    border: 1px solid;
+    border-color: #8E96C8;
+    border-collapse: collapse;
+    font-size: 1.1em;
+    color: rgb(53, 43, 43);
+    margin: 50px;
+    font-weight: 400;
+    max-width: 1100px;
+    padding: 3px;
+  }
+
+th, td {
+    background-color: #D1DAEF;
+  }
+
+h2
+{
+  font-size: 5em;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 40px;
+}
+
+h3
+{
+  font-size: 2em;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+  text-align: left;
+  margin: 70px;
+  margin-left: 160px;
+}
+
+ul
+{
+  margin-left: 250px;
+  font-size: 1.3em;
+  color: #fff;
+}
+
+form
+{
+  margin-left:250px;
+  margin-top: 70px;
+  font-size: 1.3em;
+  color: #fff
+}
+
+input[type=text], select{
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid white;
+}
+
+input[type=submit]{
+  background-color: #727A8E;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 7px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+}

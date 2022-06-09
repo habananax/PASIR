@@ -1,0 +1,23 @@
+api_user: 'root@pam'
+api_password_vault: 'bolson'
+api_host: '192.168.1.103'
+ct_password_vault: 'bolson'
+features:
+ - nesting=1
+pubkey: "{{ lookup('file', '/root/.ssh/ansible_rsa.pub') }}"
+
+#-----EDITABLE-----
+vmid: '103'
+hostname: 'Mail-Server'
+cores: '2'
+cpu: '1'
+memory: '1024'
+swap: '1024'
+node: 'proxmox3'
+disk: '15'
+storage: 'local-lvm'
+ostemplate: 'local:vztmpl/ubuntu-20.04-standard_20.04-1_amd64.tar.gz'
+netif: '{"net0":"name=eth0,gw=192.168.1.1,ip=192.168.1.108/24,bridge=vmbr0"}'
+
+#-----CONTAINER IP-----
+ct_host: '192.168.1.108'
