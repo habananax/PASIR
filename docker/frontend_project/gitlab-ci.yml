@@ -1,0 +1,35 @@
+
+stages:
+  - build
+  - deploy
+
+build-job:
+  stage: build
+  tags:
+    - docker
+  only:
+    refs:
+      - main
+    changes:
+      - "frontend/**/*"
+  script:
+    - echo "Uno de los ficheros del nuestro FRONTEND ha sido modificado."
+    - echo "Volviendo a levantar el contenedor..."
+
+deploy-job:
+  stage: deploy
+  tags:
+    - docker
+  only:
+    refs:
+      - main
+    changes:
+      - "frontend/**/*"
+  script:
+    - sudo su
+    - whoami
+    - docker rm -f menu_project
+    - rm -r /root/docker/menu_project/*
+    - cp -r ./* /root/docker/menu_project/
+    - cd /root/docker/menu_project && docker-compose up -d --force-recreate
+    - docker-compose ps
