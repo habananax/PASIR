@@ -1,0 +1,28 @@
+stages:
+  - build
+  - deploy
+
+build-job:
+  stage: build
+  tags:
+    - ansible
+  only:
+    changes:
+      - "vars.yml"
+  script:
+    - echo "El fichero vars.yml ha recibido cambios."
+    - echo "Ejecutando playbook para la creación de una nueva instancia LXC"
+
+deploy-job:
+  stage: deploy
+  tags:
+    - ansible
+  only:
+    changes:
+      - "vars.yml"
+  script:
+    - sudo su
+    - whoami
+    - eval `ssh-agent -s`
+    - ssh-add /root/.ssh/ansible_rsa
+    - ANSIBLE_HOST_KEY_CHECKING=False /root/.local/bin/ansible-playbook -i inventory.yml playbook_main.yml
