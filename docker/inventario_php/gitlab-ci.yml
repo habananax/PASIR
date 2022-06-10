@@ -1,0 +1,35 @@
+
+stages:
+  - build
+  - deploy
+
+build-job:
+  stage: build
+  tags:
+    - docker
+  only:
+    refs:
+      - main
+    changes:
+      - "phpfiles/*"
+  script:
+    - sudo su
+    - echo 'Recollecting Database Previous Data...'
+    - cp -r /root/docker/inventario/.db_data .
+    - rm -r /root/docker/inventario/*
+
+
+deploy-job:
+  stage: deploy
+  tags:
+    - docker
+  only:
+    refs:
+      - main
+    changes:
+      - "phpfiles/*"
+  script:
+    - sudo su
+    - cp -r ./* /root/docker/inventario/
+    - cd /root/docker/inventario && docker-compose up -d --force-recreate
+    - docker-compose ps
