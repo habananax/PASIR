@@ -1,6 +1,8 @@
 ## PASIR - Ana Torrecilla Martín
 
-<sub>IES Politécnico Jesús Marín - Administración de Sistemas Informáticos en Red - S21AR</sub>
+<sub>IES Politécnico Jesús Marín - Administración de Sistemas Informáticos en Red (S21AR)</sub>
+
+----------------------------------------------------------------------------------------
 
 *Centrado en el despliegue de servicios, automatización devOps y gitOps a través de GitLAB. En este proyecto se busca realizar un entorno privado de GitLAB para uso de una empresa, donde también explicaremos las diferentes funcionalidades de éste como servicio y lo usaremos para crear y almacenar una serie de subproyectos de despliegue con el uso de Docker, Ansible y Gitlab CI. También se adentrará en el uso de lenguajes en dichos subproyectos con intención de la mejora del diseño frontend en ellos, y con el fin de ampliar en más ámbitos menos conocidos (html, css, php y javascript).*
   
