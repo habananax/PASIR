@@ -36,3 +36,7 @@ Este repositorio contiene el siguiente orden de archivos:
   - Directorio **Nginx**: En este directorio se encontrará el sitio virtual configurado para el uso del proxy inverso utilizado en el proyecto.
   
                     - reverse-proxy.conf
+
+  - Directorio **Visual_Frontend**: En este directorio se encontrarán imágenes .GIF para la visualización de los proyectos frontend creados por el alumno.
+  
+                    - Archivo README.md donde se verán los GIFs
