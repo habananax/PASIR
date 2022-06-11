@@ -11,3 +11,28 @@
 
 ----------------------------------------------------------------------------------------
 
+Este repositorio contiene el siguiente orden de archivos:
+
+  - Directorio **Ansible**: En este directorio se encontrarán los Playbooks necesarios para la realización de tareas en Ansible, junto con el script GitLab CICD que llamará a los playbooks para su ejecución.
+  
+                    - gitlab-ci.yml
+                    - playbook_main.yml
+                    - install_docker.yml
+                    - install_nginx.yml
+                    - inventory.yml
+                    - vars.yml
+
+  - Directorio **Docker**: En este directorio se encontrarán los contenedores que han sido levantados con Docker y todos los archivos necesarios para el funcionamiento de cada contenedor.
+  
+                    - frontend_proyect (Contenedor con imagen NGINX y un proyecto frontend a base de HTML, CSS y JavaScript).
+                    - inventario_php (Contenedor con imagen Apache2-PHP y MySQL, y un proyecto HTML, CSS y PHP para la visualización y edición de la base de datos).
+                    - mail-server_docker (Contenedor con imagen Poste.io para la realización de un servidor de correos SSL y AntiSpam).
+
+  - Directorio **Documentación**: En este directorio se encontrará la documentación guiada con el desarrollo completo del proyecto PASIR, tanto en PDF como en DOC.
+  
+                    - Documento PDF
+                    - Documento Word
+
+  - Directorio **Nginx**: En este directorio se encontrará el sitio virtual configurado para el uso del proxy inverso utilizado en el proyecto.
+  
+                    - reverse-proxy.conf
